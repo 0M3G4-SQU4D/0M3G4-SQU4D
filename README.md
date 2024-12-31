@@ -1,17 +1,16 @@
-# 🏴‍☠️ [Team Name] CTF Team
+# 🏴‍☠️ 0M3G4-SQU4D CTF Team
 
 ![CTF Team Banner](https://example.com/banner.png)
 
-## 🌟 Welcome to [Team Name]!
-We are a group of passionate cybersecurity enthusiasts who love solving challenging problems in the world of Capture The Flag (CTF) competitions. Our goal is to learn, share, and grow while contributing to the infosec community.
+## 🌟 Welcome to 0M3G4-SQU4D
+We are a group of 4 cybersecurity enthusiasts who love solving security related problems in the world of Capture The Flag (CTF) competitions. We also provide our services that includes hosting CTFs competitions from challenges creation to the CTF platform deployment.
 
 ---
 
 ## 🚀 About Us
-- 🏆 **Founded**: [Year]
-- 🌍 **Based in**: [Location, e.g., Casablanca, Morocco]
+- 🏆 **Founded**: 2024
 - 👥 **Team Members**: [Number of Members]
-- 🔐 **Specialties**: Reverse Engineering, Cryptography, Forensics, Web Exploitation, Hardware, and more!
+- 🔐 **Specialties**: Reverse Engineering, Binary Exploitation, Cryptography, Forensics, Web Exploitation, Hardware, Osint and more. 
 
 ---
 
@@ -24,7 +23,7 @@ We are a group of passionate cybersecurity enthusiasts who love solving challeng
 ---
 
 ## 🌍 Competitions We Participate In
-- 🏅 **CTF Platforms**: [Hack The Box](https://www.hackthebox.com/), [TryHackMe](https://www.tryhackme.com/), [CTFtime](https://ctftime.org/)
+- 🏅 **CTF Platforms**: [Hack The Box](https://www.hackthebox.com/), [TryHackMe](https://www.tryhackme.com/), [CTFtime](https://ctftime.org/))
 - 🔥 **Recent CTFs**:
   - [Cyber Apocalypse 2024](https://example.com)
   - [PicoCTF 2024](https://example.com)
