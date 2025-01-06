@@ -9,7 +9,13 @@ We are a group of 4 cybersecurity enthusiasts who love solving security related 
 
 ## 🚀 About Us
 - 🏆 **Founded**: 2024
-- 👥 **Team Members**: [Number of Members]
+- 👥 **Team Members and founders**: 4
+  
+1. `Sn4keEy3s` : If you asked this guy about his first love, he will say Forensics.
+2. `klein` : The Crypto maker, the one who carries the team.  
+3. `HIGH-NOON-TWITCH` : Reverse and Pwn are like breakfast for him.
+4. `bug-Hunt3r` : If you want to hack a website, contact this guy.
+
 - 🔐 **Specialties**: Reverse Engineering, Binary Exploitation, Cryptography, Forensics, Web Exploitation, Hardware, Osint and more. 
 
 ---
@@ -32,11 +38,8 @@ We are a group of 4 cybersecurity enthusiasts who love solving security related 
 ---
 
 ## 🔥 Team Highlights
-- 🥇 **Rank**: Top [Rank] in [CTF Platform].
-- 🛠️ Developed our own CTF challenges: [Repository Link].
-- 🌟 Hosted [Number] CTF events for the infosec community.
-- 🚀 Collaborated with leading CTF teams worldwide.
-
+- 🥇 **Rank**: 3rd in CTFTime Morocco ranking .
+- 🌟 We aim to Host a CTF event.
 ---
 
 ## 🎯 Projects & Contributions
@@ -46,13 +49,7 @@ We are a group of 4 cybersecurity enthusiasts who love solving security related 
 
 ---
 
-## 💬 Join Us
-We are always looking for passionate problem solvers and cybersecurity enthusiasts. Here's how you can join us:
-- 🌐 [Official Website](https://teamname.com)
-- 📧 Email: [teamname@example.com]
-- 🐦 Twitter: [@teamname](https://twitter.com/teamname)
 
----
 
 ## 📊 GitHub Stats
 ![Team's GitHub Stats](https://github-readme-stats.vercel.app/api?username=TeamName&show_icons=true&theme=dark)
