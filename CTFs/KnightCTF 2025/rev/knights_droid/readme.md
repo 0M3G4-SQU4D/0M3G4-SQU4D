@@ -7,7 +7,7 @@ The challenge give an apk file
 
 the easiest solution is to grep for flag string, but before that let's unzip the apk file.
 
-![alt text](image-1.png)
+![alt text](./ignoreme/image-1.png)
 
 after that lets search for the flag word.
 
