@@ -1,13 +1,9 @@
-## Section Title
-
-Description
+## Description
 
 The challenge give an apk file
 ![alt text](image.png)
 
-## Section Title
-
-Solution
+## Solution
 
 the easiest solution is to grep for flag string, but before that let's unzip the apk file.
 
@@ -23,6 +19,6 @@ Its a caesar cipher !!
 
 ![alt text](image-3.png)
 
-### Subsection Title
+### flag
 
-flag : KCTF{_congrat5_KNIGHT_y0u_g0t_yOuR_Kn1gh7_dR01d_}
+KCTF{_congrat5_KNIGHT_y0u_g0t_yOuR_Kn1gh7_dR01d_}
