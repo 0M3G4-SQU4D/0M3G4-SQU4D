@@ -1,0 +1,24 @@
++ locate address of a function in libc :
+
+    >>> readelf -s ./libc.so.6 | grep -i "system"
+
++ locate strings in libc :
+
+    >>> strings -a -t x ./libc.so.6 | grep -i "/bin/sh"
+
++ no random in libc base address : 
+
+    >>> echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
+
++ re enable ASLR (address space layout randomization):
+
+    >>> echo 2 | sudo tee /proc/sys/kernel/randomize_va_space
+
++ visualize the available gadgets within a binary file :
+
+    >>> ROPgadget --binary /lib/x86_64-linux-gnu/libc.so.6
+
++ change libc of a binary :
+
+    >>> LD_PRELOAD=/path/to/custom/libc.so.6 ./your_binary
+    >>> patchelf --set-rpath <directory_path_where_libc_exist> ./elf_file
