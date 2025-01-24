@@ -7,3 +7,7 @@ when dealing with a ret2libc attack and you face a stack alignement problem just
 something like this
 
 ![alt text](image-1.png)
+
+## when dealing with flag reader
+
+    /proc/loadavg

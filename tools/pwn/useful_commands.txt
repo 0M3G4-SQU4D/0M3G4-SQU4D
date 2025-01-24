@@ -22,3 +22,11 @@
 
     >>> LD_PRELOAD=/path/to/custom/libc.so.6 ./your_binary
     >>> patchelf --set-rpath <directory_path_where_libc_exist> ./elf_file
+
++ Global variable within the binary can be checked using readelf
+    
+    >>>  readelf -s auth | grep <variable_name>
+
++ get virtual memory address of a binary:
+
+    >>> rabin2 -z <binary> 

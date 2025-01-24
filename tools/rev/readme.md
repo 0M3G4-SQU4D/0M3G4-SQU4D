@@ -11,3 +11,7 @@ link : https://github.com/skylot/jadx/releases/download/v1.5.1/jadx-1.5.1.zip
 2 - IDA (software)
 
 3 - dogbolt (web app)
+
+## python byte-code
+
+1- pylingual
