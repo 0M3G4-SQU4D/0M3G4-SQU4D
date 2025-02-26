@@ -14,6 +14,10 @@
 
     >>> echo 2 | sudo tee /proc/sys/kernel/randomize_va_space
 
++ in gdb :
+
+    >>> set disable-randomization off 
+
 + visualize the available gadgets within a binary file :
 
     >>> ROPgadget --binary /lib/x86_64-linux-gnu/libc.so.6
@@ -30,3 +34,8 @@
 + get virtual memory address of a binary:
 
     >>> rabin2 -z <binary> 
+
++ get section details with permissions
+
+    >>> rabin2 -S <bianry>
+
