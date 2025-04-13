@@ -1,12 +1,32 @@
-Hi, here is a writeup about the Bombardino Forensics chall, 
 
-So downloading the dist we get a linux file system.
+---
+
+## Bombardino Forensics Challenge – Writeup
+
+### Author & Team
+
+- **Author**: Sn4keEy3s 
+- **Team**: 0M3G4_SQU4D
+
+---
+
+### Initial Overview
+
+After downloading the challenge distribution, we get access to a Linux file system.
 
 ![alt text](image-8.png)
-The challenge desc said something about a file named  `scriptiono`, so locating it with locate tool will reveal its path, 
+
+The challenge description mentions a file named `scriptiono`. Using the `locate` tool quickly reveals its location.
+
 ![alt text](image.png)
 
-`/home/sn4keey3s/Downloads/INPT-CTF/usr/lib/tools/Bombardino_scriptino.sh` content :
+The file is located at:
+
+```
+/home/sn4keey3s/Downloads/INPT-CTF/usr/lib/tools/Bombardino_scriptino.sh
+```
+
+Here is the content of the script:
 
 ```bash
 #!/bin/bash
@@ -80,47 +100,81 @@ rm -rf "$TEMP_DIR"
 
 
 exit
-
 ```
 
-This script is malicious in nature, it performs data exfiltration and uploads sensitive files to a remote GitHub repository. `github.com/jantofix12/samaqlino_forensicino_bombardini.git`
+This script is clearly malicious. It collects sensitive data like SSH keys, network information, and contents of `/home` and `/srv`, compresses them, and then pushes them to a remote GitHub repository:
 
-Lets clone it, 
+```
+https://github.com/jantofix12/samaqlino_forensicino_bombardini.git
+```
+
+---
+
+### Investigating the GitHub Repository
+
+Let’s clone the repository.
 
 ![alt text](image-1.png)
 
-as we see this commit is about a simple website that is not uploaded by the malware( some fishy things by `@samaqlo` bach y9olabna ),
-in the malware src code, we see that the each commit it's in a branch named after the timestamp of it , `BRANCH_NAME="exfil-$(date +%s)"`, so we can get the old commit by the malware to check the uploaded files.
+The default branch contains what looks like a simple website, not something uploaded by the malware. Suspiciously, it seems to be a cover-up by the user `@samaqlo`.
+
+Looking at the malware’s code, we see that each exfiltration commit is pushed to a branch named after a UNIX timestamp:
+
+```bash
+BRANCH_NAME="exfil-$(date +%s)"
+```
+
+That means we need to look at the older branches to find actual stolen data.
 
 ![alt text](image-2.png)
 
-Ohh, a lot of interesting branches, after searching a bit in the branches, you'll get this interesting one `exfil-1744466130`. use checkout to jumt to it.
+There are several interesting branches. One of them is `exfil-1744466130`. Let’s check it out using `git checkout`.
 
 ![alt text](image-3.png)
 
-So we found the `srv_files.tar` exfiltrated by the malware, untar it we have some serious files like `secret.zip` that contains the flag, but it is locked and a .kdbx file which is a pass-protected database for KeePass Manager that stores protected passwords. so the idea is easy, we should crack the db to get the passwords to unzip the flag from `secret.zip`.
+Inside that branch, we find the file `srv_files.tar`, which was exfiltrated by the malware. After extracting it, we see some notable files, including `secret.zip` (which is password-protected) and a `.kdbx` file – a KeePass database.
 
-So how to crack this shit, simply some osint on tools for cracking KeePass, i found this one :
+The idea now is to crack the KeePass database to extract the password that unlocks `secret.zip`.
+
+---
+
+### Cracking the KeePass Database
+
+After doing a bit of OSINT on KeePass cracking tools, I came across this one:
+
 ![alt text](image-4.png)
 
-but this is where my nightmare begins, the script doesn't work on `pop os` or `ubuntu`, only works on `kali linux`, but i think the prob is with the dependency that the cracking process is rellying on which is `keepassxc`. it might have diff internal implementations or diff other dependencies on the diff OSs, that's what i think,
+However, this is where the real struggle began. The tool didn’t work on Pop!_OS or Ubuntu. It only ran successfully on Kali Linux. I suspect the issue is related to the `keepassxc` dependency, which might have different internal implementations or dependencies across distributions.
 
-So after using the command `./keepass4brute/keepass4brute.sh secret_vault.kdbx rockyou.txt` on my collegue's KALI machine, cracked it : `pass = iloveyou1`
+Eventually, I ran the following command on a colleague’s Kali machine:
 
-now lets open the db with this password, 
+```
+./keepass4brute/keepass4brute.sh secret_vault.kdbx rockyou.txt
+```
+
+The password was cracked:  
+`iloveyou1`
+
+---
+
+### Retrieving the Flag
+
+Using that password, I opened the KeePass database.
 
 ![alt text](image-5.png)
 
-And boooom.
+It revealed four stored passwords. I tried each one on the zip file.
 
 ![alt text](image-6.png)
 
-you found 4 passwords, try each to open the zip file,
+The correct password for the zip file was:  
+`ArvmZbUrXzqt3dr`
 
-![alt text](image-7.png)
+Inside, we finally find the flag:  
+`IDEH{bombardino_scriptino_left_no_log_in_the_loggino}`
 
-Pass = `ArvmZbUrXzqt3dr`
+---
 
-Flag = `IDEH{bombardino_scriptino_left_no_log_in_the_loggino}`
+Thanks for the challenge. It was well designed, though I think it would be helpful to mention the compatibility issue with non-Kali Linux systems, especially since the cracking step depends heavily on environment-specific behavior.
 
-Thanks for this chall, it was good, but i think the Kali Machine prb should be mentioned.
+---
