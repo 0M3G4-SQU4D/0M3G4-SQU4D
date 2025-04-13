@@ -2,7 +2,7 @@
 ---
 
 ## Bombardino Forensics Challenge – Writeup
-
+### blooded – only one solve.
 ### Author & Team
 
 - **Author**: Sn4keEy3s 
