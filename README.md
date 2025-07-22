@@ -1,6 +1,6 @@
 # 🏴‍☠️ 0M3G4-SQU4D CTF Team
 
-![CTF Team Banner](OS.gif)
+![CTF Team Banner](OS.png)
 
 ## Welcome to 0M3G4-SQU4D
 We are a group of cybersecurity enthusiasts who love solving security related problems in the world of Capture The Flag (CTF) competitions. We also provide our services that includes hosting CTFs competitions from challenges creation to the CTF platform deployment.
