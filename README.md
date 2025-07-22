@@ -9,8 +9,8 @@ We are a group of cybersecurity enthusiasts who love solving security related pr
 
 ## Connect With Us
 - **GitHub**: [@0M3G4-SQU4D](https://github.com/0M3G4-SQU4D)
-- **CTFtime**:  [](https://ctftime.org/team/306615)
-- **Website**: [](https://omega-squad.team)
+- **CTFtime**:  [CTFTime Link](https://ctftime.org/team/306615)
+- **Website**: [Our website](https://omega-squad.team)
   
 ---
 
