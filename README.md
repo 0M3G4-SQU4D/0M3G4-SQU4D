@@ -7,6 +7,13 @@ We are a group of cybersecurity enthusiasts who love solving security related pr
 
 ---
 
+## Connect With Us
+- **GitHub**: [@0M3G4-SQU4D](https://github.com/0M3G4-SQU4D)
+- **CTFtime**:  [](https://ctftime.org/team/306615)
+- **Website**: [](https://omega-squad.team)
+  
+---
+
 ## About Us
 - **Founded**: 2024
 - **Team Members**: 6 active members
@@ -118,12 +125,7 @@ Achieved 3rd place at the National IDEH INPT CTF 2025 v6.
 ![0M3G4-SQU4D GitHub Stats](https://github-readme-stats.vercel.app/api?username=0M3G4-SQU4D&show_icons=true&theme=dark)
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=0M3G4-SQU4D&layout=compact&theme=dark)
 
----
 
-## Connect With Us
-- **GitHub**: [@0M3G4-SQU4D](https://github.com/0M3G4-SQU4D)
-- **CTFtime**: [Our CTFtime Profile]
-- **Website**: [Team Website]
 
 ---
 
